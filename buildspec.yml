@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "No dependencies needed."
+  build:
+    commands:
+      - echo "Build started on `date`"
+  post_build:
+    commands:
+      - echo "Deploying to local folder..."
+      - xcopy * ..\local_s3 /s /y
